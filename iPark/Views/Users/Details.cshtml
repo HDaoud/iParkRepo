@@ -1,0 +1,58 @@
+﻿@model iPark.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plate_n)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plate_n)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mobile_n)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mobile_n)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.car_model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.car_model)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UID.Trim() }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

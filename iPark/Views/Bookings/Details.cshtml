@@ -1,0 +1,66 @@
+﻿@model iPark.Models.Booking
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Booking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.booking_time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.booking_time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.checkin_time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.checkin_time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.release_time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.release_time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.checkout_time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.checkout_time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParkingLot.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParkingLot.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.book_id.Trim() }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

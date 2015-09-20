@@ -1,0 +1,63 @@
+﻿@model IEnumerable<iPark.Models.Booking>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.booking_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.checkin_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.release_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.checkout_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ParkingLot.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.booking_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.checkin_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.release_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.checkout_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParkingLot.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.book_id.Trim() }) |
+            @Html.ActionLink("Details", "Details", new { id = item.book_id.Trim() }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.book_id.Trim() })
+        </td>
+    </tr>
+}
+
+</table>
